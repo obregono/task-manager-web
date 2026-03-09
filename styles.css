@@ -1,0 +1,127 @@
+/* Reseteo y Tipografía General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Usamos fallbacks para asegurar que cargue la versión Light en cualquier OS */
+    font-family: 'Helvetica Neue Light', 'Helvetica Light', 'Helvetica', Arial, sans-serif;
+    font-weight: 300; /* Fuerza el grosor delgado (Light) */
+    letter-spacing: -0.5px; /* Valor negativo para pegar un poco más las letras */
+}
+
+/* El Fondo Oscuro */
+body {
+    background-color: #0C0E1B; /* El color hexadecimal exacto */
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    color: #ffffff; /* Texto base en blanco */
+}
+
+/* El Contenedor Principal */
+.container {
+    width: 100%;
+    max-width: 500px; /* Un ancho ideal para las cards */
+    padding: 20px;
+}
+
+/* El Título */
+h1 {
+    text-align: center;
+    color: #ffffff; 
+    margin-bottom: 30px;
+    font-weight: 300; /* Le quitamos el 'bold' para que respete el estilo Light */
+    letter-spacing: -1.5px; /* Pegamos las letras del título un poco más para que resalte */
+}
+
+/* Agrupación del Input y Botón */
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+input[type="text"] {
+    flex: 1; /* Hace que el input tome todo el espacio disponible */
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra sutil */
+    background-color: #ffffff;
+    color: #333;
+}
+
+input[type="text"]:focus {
+    outline: 2px solid #6200ea; /* Un color de enfoque tipo Android/Material */
+}
+
+button#addTaskBtn {
+    padding: 0 25px;
+    background-color: #6200ea; /* Morado clásico de Material Design */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: background-color 0.2s;
+}
+
+button#addTaskBtn:hover {
+    background-color: #3700b3;
+}
+
+/* =========================================
+   MATERIAL DESIGN CARDS
+   ========================================= */
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Separación entre cada card */
+}
+
+li {
+    background-color: #b5a3e9; 
+    color: #202124; 
+    padding: 16px 20px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 300; /* Antes estaba en 500, lo bajamos a 300 (Light) */
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+li:hover {
+    /* Efecto interactivo: la card se "eleva" al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* El botón del basurero */
+li button {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+li button:hover {
+    background-color: #ffebee; /* Un fondo rojo muy clarito al hacer hover */
+    transform: scale(1.1);
+}
+
+/* Mensaje de estado */
+#emptyMessage {
+    text-align: center;
+    color: #7a829a; /* Un gris azulado que se pierde en el fondo */
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
