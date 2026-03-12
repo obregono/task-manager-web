@@ -26,4 +26,37 @@
     <script src="app.js"></script>
 
 </body>
+
+<body>
+    <div class="container">
+        <div id="authSection">
+            <h1>Bienvenido</h1>
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+                <input type="text" id="usernameInput" placeholder="Usuario">
+                <input type="password" id="passwordInput" placeholder="Contraseña">
+                <button id="loginBtn" style="background-color: #6200ea; color: white; padding: 10px; border: none; border-radius: 6px; cursor: pointer;">Iniciar Sesión</button>
+                <button id="registerBtn" style="background-color: #333; color: white; padding: 10px; border: none; border-radius: 6px; cursor: pointer;">Registrarse</button>
+            </div>
+            <p id="authMessage" style="text-align: center; color: #ff5252;"></p>
+        </div>
+
+        <div id="taskSection" style="display: none;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h1 style="margin-bottom: 0;">Mis Tareas</h1>
+                <button id="logoutBtn" style="background: none; border: 1px solid #ff5252; color: #ff5252; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Salir</button>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="Nueva tarea...">
+                <button id="addTaskBtn">Agregar</button>
+            </div>
+
+            <ul id="taskList"></ul>
+            <p id="emptyMessage" style="display: none;">No hay tareas pendientes.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
 </html>

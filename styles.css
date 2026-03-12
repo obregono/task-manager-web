@@ -41,19 +41,23 @@ h1 {
     margin-bottom: 30px;
 }
 
-input[type="text"] {
-    flex: 1; /* Hace que el input tome todo el espacio disponible */
+/* Agregamos la coma y el selector de password aquí */
+input[type="text"],
+input[type="password"] {
+    flex: 1; 
     padding: 15px;
     border: none;
     border-radius: 6px;
     font-size: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra sutil */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
     background-color: #ffffff;
     color: #333;
 }
 
-input[type="text"]:focus {
-    outline: 2px solid #6200ea; /* Un color de enfoque tipo Android/Material */
+/* Y también lo agregamos aquí para el efecto cuando haces clic (focus) */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: 2px solid #6200ea; 
 }
 
 button#addTaskBtn {
