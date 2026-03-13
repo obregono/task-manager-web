@@ -129,3 +129,86 @@ li button:hover {
     margin-top: 20px;
     font-size: 1.1rem;
 }
+
+/* =========================================
+   SECCIONES DE AUTENTICACIÓN Y TAREAS (SPA)
+   ========================================= */
+#authSection, #taskSection {
+    width: 100%;
+    /* Pequeña animación para que el cambio de pantalla se vea suave */
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Contenedor interno del formulario de login */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   BOTONES DE AUTENTICACIÓN
+   ========================================= */
+button#loginBtn {
+    background-color: #6200ea;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: background-color 0.2s;
+}
+
+button#loginBtn:hover {
+    background-color: #3700b3;
+}
+
+button#registerBtn {
+    background-color: #333333;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: background-color 0.2s;
+}
+
+button#registerBtn:hover {
+    background-color: #555555;
+}
+
+button#logoutBtn {
+    background: transparent;
+    border: 1px solid #ff5252;
+    color: #ff5252;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+button#logoutBtn:hover {
+    background-color: #ff5252;
+    color: white;
+}
+
+/* Encabezado de la sección de tareas */
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
